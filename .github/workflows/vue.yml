@@ -21,12 +21,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - run: cd web_src
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: cd web_src
     - run: npm run build
     - name: Upload artifact  
       uses: actions/upload-artifact@v4.4.3
