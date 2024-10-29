@@ -35,7 +35,7 @@ jobs:
     - name: Upload artifact  
       uses: actions/upload-artifact@v4.4.3
       with:  
-          name: wvp-pro.jar # 构建产物的名称  
-          path: target/wvp-pro-.jar # 替换为你的JAR文件路径
+          name: wvp-pro # 构建产物的名称  
+          path: target/**/*.* # 替换为你的JAR文件路径
 
 
